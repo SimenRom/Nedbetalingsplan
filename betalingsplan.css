@@ -1,0 +1,32 @@
+div.wrapper{
+    width: 70%;
+    margin: auto;
+
+}
+div.beskrivelse {
+    width: 70%;
+}
+input {
+    margin-top: 3px;
+}
+div.knapp{
+    color: white;
+    background-color: green;
+    cursor: pointer;
+    padding: 3px;
+    margin-top: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+div.singelBetaling {
+    border: solid bisque;
+
+}
+div.datoDiv {
+    display: inline-block;
+    padding: 3px;
+    border-right: solid bisque 1px;
+}
+div.sumDiv{
+    display: inline-block;
+    padding: 3px;
+}

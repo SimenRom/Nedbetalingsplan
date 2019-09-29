@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="betalingsplan.js"></script>
+    <link rel="stylesheet" href="betalingsplan.css"></link>
+</head>
+<body>
+<div class="wrapper">
+    <div class="beskrivelse">
+        <h1>Den ultimate betalingsplan</h1>
+        <p>Planlegger du å ta opp lån? Usikker på kor mykje du må betale i måneden for å bli kvitt lånet innen nokre år? Denne kalkulatoren forteller deg kor mykje og når du må betale for å oppnå drømmelånet! Lagd med verktøy frå Stacc.</p>
+    </div>
+    <div class="informasjonInn">
+        <form id="inputVerdier">
+
+            Lånebeløp<input value="2000000" type="text" id="belop"/>kr<br>
+            Nominell Rente<input value="3.00" id="nomRente" size="3"/>%<br> <!-- https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+            Termingebyr<input type="text" value="30" id="termingebyr"/>kr<br>
+            Utlopsdato<input type="date" value="2045-01-01" id="utlopsdato"/><br>
+            Saldo Dato<input type="date" value="2020-01-01" id="saldoDato"/><br>
+            Dato fyrste Innbetaling<input type="date" value="2020-02-01" id="fyrsteBetaling"/><br>
+            <div class="knapp" onClick="lagBetalingsplan()">Lag betalingsplan</div>
+        </form>
+    </div>
+    <div class="resultat" id="resultat">
+
+    </div>
+</div>
+<br><br><br>popupknapp som forklarer
+</body>
+</html>
