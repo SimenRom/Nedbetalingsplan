@@ -13,19 +13,22 @@
     <div class="informasjonInn">
         <form id="inputVerdier">
 
-            Lånebeløp<input value="2000000" type="text" id="belop"/>kr<br>
-            Nominell Rente<input value="3.00" id="nomRente" size="3"/>%<br> <!-- https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-            Termingebyr<input type="text" value="30" id="termingebyr"/>kr<br>
+            Lånebeløp (kr)<input value="2000000" type="text" size="4" id="belop"/><br>
+            Nominell Rente (%)<input value="3.00" id="nomRente" size="4"/><br> <!-- https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+            Termingebyr (kr)<input type="text" value="30" size="4" id="termingebyr"/><br>
             Utlopsdato<input type="date" value="2045-01-01" id="utlopsdato"/><br>
             Saldo Dato<input type="date" value="2020-01-01" id="saldoDato"/><br>
             Dato fyrste Innbetaling<input type="date" value="2020-02-01" id="fyrsteBetaling"/><br>
             <div class="knapp" onClick="lagBetalingsplan()">Lag betalingsplan</div>
         </form>
-    </div>
+    </div><br>
     <div class="resultat" id="resultat">
-
+		<div class="singelBetaling">
+			<div class="datoDiv">Dato</div>
+			<div class="sumDiv">Betale</div>
+			<div class="laanDiv">Lån igjen</div>
+		</div>
     </div>
 </div>
-<br><br><br>popupknapp som forklarer
 </body>
 </html>

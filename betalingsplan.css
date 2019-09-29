@@ -1,32 +1,73 @@
 div.wrapper{
     width: 70%;
     margin: auto;
-
+	width: 400px;
 }
 div.beskrivelse {
-    width: 70%;
+    width: 100%;
 }
 input {
     margin-top: 3px;
 }
 div.knapp{
+	-text-align: right;
+	height: 30px;
     color: white;
     background-color: green;
     cursor: pointer;
     padding: 3px;
     margin-top: 10px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, .5);
+	text-align:center;
+	width: 50%;
+	margin: auto;
+	margin-top: 5px;
+	font-size: large;
 }
 div.singelBetaling {
-    border: solid bisque;
-
+    border-bottom: solid grey 1px;
+	margin-bottom: 6px;
+	--width: 350px;
+	box-shadow: 1px 0px 2px rgba(0, 0, 0, .5);
+	background-color: white;
 }
 div.datoDiv {
     display: inline-block;
     padding: 3px;
-    border-right: solid bisque 1px;
+	width: 100px;
+    border-right: solid grey 1px;
 }
 div.sumDiv{
     display: inline-block;
     padding: 3px;
+	width: 100px;
+	border-right: solid grey 1px;
+	margin-left: 10px;
+}
+div.laanDiv{
+	display: inline-block;
+    padding: 3px;
+	margin-left: 10px;
+}
+div.nyttArDiv {
+	color: red;
+	font-size: x-large;
+}
+
+input {
+	margin-left: 5px;
+	margin-right: 2px;
+	text-align: right;
+}
+div.informasjonInn{
+	padding: 10px;
+	border: solid gray 1px;
+	--width: 50%;
+	--width: 350px;
+	text-align: right;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+div.resultat {
+	background-color: #e8e8e8;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }

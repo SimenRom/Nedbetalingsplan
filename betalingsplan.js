@@ -8,10 +8,47 @@ function lagBetalingsplan() {
     }
 }
 function skrivBetalingsplan(respons){
+	//fjerner det som står fra før
     $('.singelBetaling').remove();
-    respons.nedbetalingsplan.innbetalinger.forEach(betaling => {
-        let ytterDiv = document.createElement("div");
+	
+	let ytterDiv = document.createElement("div");
+	
+	
+	let datoDiv = document.createElement("div");
+	$(datoDiv).addClass("datoDiv");
+	datoDiv.innerHTML = "Dato";
+	ytterDiv.appendChild(datoDiv);
 
+	let sumDiv = document.createElement("div");
+	$(sumDiv).addClass("sumDiv");
+	sumDiv.innerHTML = "Betale";
+	ytterDiv.appendChild(sumDiv);
+	
+	let laanDiv = document.createElement("div");
+	$(laanDiv).addClass("laanDiv");
+	laanDiv.innerHTML = "Lån igjen";
+	ytterDiv.appendChild(laanDiv);	
+	
+	$(ytterDiv).addClass("singelBetaling");
+	document.getElementById("resultat").appendChild(ytterDiv);
+	let nyttAr = 0;
+    respons.nedbetalingsplan.innbetalinger.forEach(betaling => {
+		ytterDiv = document.createElement("div");
+		
+		//Printer nytt år for å få oversikt
+		if(parseInt(betaling.dato.substring(0, 4), 10) > nyttAr){
+			nyttAr = betaling.dato.substring(0, 4);
+			let ytterDiv2 = document.createElement("div");
+			
+			let nyttArDiv = document.createElement("div");
+			$(nyttArDiv).addClass("nyttArDiv");
+			nyttArDiv.innerHTML = betaling.dato.substring(0, 4);
+			ytterDiv2.appendChild(nyttArDiv);
+			
+			$(ytterDiv).addClass("singelBetaling");
+			document.getElementById("resultat").appendChild(ytterDiv2);
+		}
+		
         let datoDiv = document.createElement("div");
         $(datoDiv).addClass("datoDiv");
         datoDiv.innerHTML = betaling.dato;
@@ -19,10 +56,14 @@ function skrivBetalingsplan(respons){
 
         let sumDiv = document.createElement("div");
         $(sumDiv).addClass("sumDiv");
-        sumDiv.innerHTML = betaling.total;
+        sumDiv.innerHTML = betaling.total.toFixed(0);
         ytterDiv.appendChild(sumDiv);
-
-
+		
+		let laanDiv = document.createElement("div");
+        $(laanDiv).addClass("laanDiv");
+        laanDiv.innerHTML = betaling.restgjeld.toFixed(0); 
+        ytterDiv.appendChild(laanDiv);
+		
         $(ytterDiv).addClass("singelBetaling");
         document.getElementById("resultat").appendChild(ytterDiv);
     });
